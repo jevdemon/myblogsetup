@@ -1,0 +1,159 @@
+/*
+To embed graphics in a post:
+
+The visual editor's image button won't give you a way to set a CSS class directly, so you'll need to use the  source/code view button in the toolbar. After inserting an image normally, switch to code view and add the class manually to the  tag like this:
+               img class="img-float-right" src="..." alt="..."
+A few notes on sizing:
+  200px is the default size — adjust up/down to taste.
+  Margin values create breathing room between the image and the wrapped text (bottom+left for right-floated images, bottom+right for left-floated ones).
+  The mobile media query drops the float entirely below 600px width, so the image doesn't awkwardly squish next to text on a phone screen — it'll just center itself above the paragraph instead.
+*/
+.entry-content p,
+.entry-content h3,
+.e-content p,
+.e-content h3 {
+    scroll-margin-top: 65px;
+}
+.namebadge,
+.namebadge-profile {
+    display: none !important;
+}
+.basics{
+    display: none !important;
+}
+.blank-footer .u-platform {
+    display: none !important;
+}
+.img-float-right {
+    float: right;
+    width: 200px;
+    height: auto;
+    margin: 0 0 0.5em 1em;
+}
+.img-float-left {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin: 0 1em 0.5em 0;
+}
+@media (max-width: 991px) {
+    .entry-content p,
+    .entry-content h3,
+    .e-content p,
+    .e-content h3 {
+        scroll-margin-top: 100px;
+    }
+}
+.para-permalink {
+    font-size: 0.8em;
+    color: #999;
+    text-decoration: none;
+    margin-left: 0.4em;
+    opacity: 0.5;
+}
+.para-permalink:hover {
+    opacity: 1;
+    color: #666;
+}
+.simple-rte-toolbar { border: 1px solid #ccc; border-bottom: none; padding: 0.5em; background: #f5f5f5; border-radius: 4px 4px 0 0; } .simple-rte-toolbar button { margin-right: 0.4em; padding: 0.3em 0.6em; border: 1px solid #bbb; background: #fff; border-radius: 3px; cursor: pointer; } .simple-rte-toolbar button:hover { background: #e8e8e8; } .simple-rte-editable { border: 1px solid #ccc; border-radius: 0 0 4px 4px; padding: 1em; min-height: 300px; background: #fff; } .simple-rte-editable:focus { outline: none; border-color: #66afe9; }
+.simple-rte-editable blockquote,
+.simple-rte-editable ul,
+.simple-rte-editable li {
+    font-size: 1em;
+    font-style: normal;
+}
+.simple-rte-editable blockquote {
+    margin: 0 0 1em 0;
+    padding-left: 1em;
+    border-left: 3px solid #ccc;
+}
+.simple-rte-editable ul {
+    margin: 0 0 1em 0;
+    padding-left: 1.5em;
+}
+.simple-rte-html-toggle {
+    font-family: monospace;
+}
+.simple-rte-html-toggle.active {
+    background: #333;
+    color: #fff;
+}
+.simple-rte-htmlview {
+    width: 100%;
+    min-height: 300px;
+    font-family: monospace;
+    font-size: 0.9em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+    box-sizing: border-box;
+}
+.entry-content p:has(> img),
+.e-content p:has(> img) {
+    margin: 0.5em 0;
+}
+.about-sidebar hr {
+   margin: 1em 0; border-color: #ddd; 
+} 
+.about-sidebar h4 {
+   font-size: 1.1em;
+   margin-bottom: 0.3em;
+} 
+.about-sidebar ul {
+   padding-left: 1.2em;
+   margin-bottom: 0;
+} 
+.about-sidebar ul li { 
+   margin-bottom: 0.5em; 
+}
+.simple-rte-rotate-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.simple-rte-rotate-box {
+    background: #fff;
+    border-radius: 6px;
+    padding: 1.5em;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+}
+.simple-rte-rotate-preview {
+    max-width: 100%;
+    max-height: 50vh;
+    display: block;
+    margin: 0 auto 1em auto;
+    border: 1px solid #ccc;
+}
+.simple-rte-rotate-buttons button {
+    margin: 0.3em;
+    padding: 0.5em 1em;
+    border: 1px solid #bbb;
+    background: #f5f5f5;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.simple-rte-rotate-buttons button:hover {
+    background: #e8e8e8;
+}
+.simple-rte-rotate-done-row {
+    margin-top: 1em;
+}
+.simple-rte-rotate-finish {
+    padding: 0.6em 1.5em;
+    background: #2c7be5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
