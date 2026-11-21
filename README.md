@@ -1,6 +1,7 @@
 # Idno Blog Customizations
 
 Backup of custom files for my Idno (formerly Known) install at evdemon.org/blog.
+I've got another repo that adds better Markdown support to Known [here](https://github.com/jevdemon/idno-markdown).
 
 ## Install context
 
